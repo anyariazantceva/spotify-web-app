@@ -1,0 +1,10 @@
+.app-header {
+    background: linear-gradient(#282c34, #000000);
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10rem 0;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
