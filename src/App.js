@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import NowPlaying from "./components/NowPlaying";
+import AppHeader from "./components/AppHeader";
+import ArtistsList from "./components/ArtistsList";
 import SpotifyWebApi from 'spotify-web-api-js';
+
 const spotifyApi = new SpotifyWebApi();
+
 
 class App extends Component {
     constructor(){
@@ -14,8 +19,6 @@ class App extends Component {
         }
         this.state = {
             loggedIn: token ? true : false,
-            nowPlaying: { name: 'Not Checked', albumArt: '' },
-            artist: {name: '', image: ''}
         }
     }
     getHashParams() {
@@ -30,48 +33,18 @@ class App extends Component {
         return hashParams;
     }
 
-    getNowPlaying(){
-        spotifyApi.getMyCurrentPlaybackState()
-            .then((response) => {
-                this.setState({
-                    nowPlaying: {
-                        name: response.item.name,
-                        albumArt: response.item.album.images[0].url
-                    }
-                });
-            })
-    }
 
-    getArtist = () => {
-        spotifyApi.searchArtists('Loathe')
-            .then((response) => {
-                this.setState({
-                    artist: {
-                        name: response.artists.items[0].name,
-                        image: response.artists.items[0].images[0].url
-                    }
-                })
-                console.log(this.state.artist)
-        })
-    }
+
+
     render() {
         return (
             <div className="App">
+                <AppHeader/>
                 <a href='http://localhost:8888' > Login to Spotify </a>
-                <div>
-                    Now Playing: { this.state.nowPlaying.name }
-                </div>
-                <div>
-                    <img src={this.state.nowPlaying.albumArt} style={{ height: 150 }}/>
-                </div>
                 { this.state.loggedIn &&
-                <button onClick={() => this.getNowPlaying()}>
-                    Check Now Playing
-                </button>
+                <NowPlaying/>
                 }
-                <button onClick={this.getArtist}>Search</button>
-                <div>Artist name {this.state.artist.name}</div>
-                <div>Artist image <img src={this.state.artist.image} alt=""/></div>
+                <ArtistsList/>
             </div>
         );
     }

@@ -1,13 +1,18 @@
 import React, {Component} from 'react';
 import './ArtistsList.css';
+import SearchBar from "./SearchBar";
+import SpotifyWebApi from 'spotify-web-api-js';
+import Artist from "./Artist";
 
+const spotifyApi = new SpotifyWebApi();
 
 export default class ArtistsList extends Component {
     constructor(props) {
         super(props)
         this.state = {
             searchValue: '',
-            artists: null
+            artists: []
+
         }
     }
 
@@ -18,26 +23,35 @@ export default class ArtistsList extends Component {
     };
 
     handleSubmit = (e) => {
-        e.preventDefault();
         this.setState({
             searchValue: e.target.value
         })
-        fetch('https://api.spotify.com/v1/me/player/recently-played')
-            .then(response => response.json())
-            .then(data => console.log(data))
 
     };
 
+    getArtist = () => {
+        spotifyApi.searchArtists(this.state.searchValue)
+            .then((response) => {
+                this.setState({
+                    artists: response.artists.items
+
+                })
+                console.log(this.state.artists)
+            })
+    }
 
     render() {
+        const list = <div>
+            {this.state.artists.map((item) => {
+                return <Artist key={item.id} name={item.name} followers={item.followers.total} genres={item.genres}/>
+            })}
+        </div>
         return (
             <div className='container'>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" onChange={this.handleChange} value={this.state.value}/>
-                    <button>Search</button>
-                </form>
-                <div className="list">
+                <SearchBar handleClick={this.getArtist} value={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
 
+                <div className="list">
+                    {list}
                 </div>
             </div>
         )

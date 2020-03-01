@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3738baaa-c749-46b7-b9b5-27e6da27cfa1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Artist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NowPlaying.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SearchBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppHeader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ArtistsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ArtistsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/spotify-api/auth-server/authorization_code/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/spotify-api/auth-server/authorization_code/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,15 +36,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Аня/React Projects/todolist" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/auth-server" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Дмитрий\Desktop\Integrify\music-app\public" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Дмитрий\Desktop\Integrify\music-app\src\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Дмитрий\Desktop\Integrify\music-app\server" />
+      <recent name="C:\Users\Дмитрий\Desktop\Integrify\music-app\public" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -82,7 +84,11 @@
       <workItem from="1582897745403" duration="1867000" />
       <workItem from="1582990987803" duration="5629000" />
       <workItem from="1582999396205" duration="1699000" />
-      <workItem from="1583001192197" duration="1642000" />
+      <workItem from="1583001192197" duration="2335000" />
+      <workItem from="1583056821852" duration="604000" />
+      <workItem from="1583059563127" duration="846000" />
+      <workItem from="1583074129189" duration="916000" />
+      <workItem from="1583084647191" duration="3480000" />
     </task>
     <task id="LOCAL-00001" summary="Started a music player project">
       <created>1582061420362</created>
@@ -91,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582061420362</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Set up auth and spotify api">
+      <created>1583002885171</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583002885172</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,21 +124,29 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/src/spotify-api/auth-server" />
+    </ignored-roots>
     <MESSAGE value="Started a music player project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started a music player project" />
+    <MESSAGE value="Set up auth and spotify api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up auth and spotify api" />
   </component>
   <component name="WindowStateProjectService">
     <state x="350" y="50" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582993656763">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="350" y="50" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582993656763" />
-    <state x="197" y="0" key="CommitChangelistDialog2" timestamp="1582061416252">
+    <state x="197" y="0" key="CommitChangelistDialog2" timestamp="1583002879829">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="197" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582061416252" />
-    <state x="413" y="61" key="FileChooserDialogImpl" timestamp="1582116207712">
+    <state x="197" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583002879829" />
+    <state x="413" y="61" key="FileChooserDialogImpl" timestamp="1583084691916">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="61" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582116207712" />
+    <state x="413" y="61" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583084691916" />
+    <state x="60" y="0" key="SettingsEditor" timestamp="1583084696368">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="60" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583084696368" />
   </component>
 </project>
