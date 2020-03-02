@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import './ArtistsList.css';
-import SearchBar from "./SearchBar";
+import SearchBar from "../SearchBar";
 import SpotifyWebApi from 'spotify-web-api-js';
-import Artist from "./Artist";
+import Artist from "../artist/Artist";
 
 const spotifyApi = new SpotifyWebApi();
 
@@ -11,7 +11,8 @@ export default class ArtistsList extends Component {
         super(props)
         this.state = {
             searchValue: '',
-            artists: []
+            artists: [],
+            songs: []
 
         }
     }
@@ -39,18 +40,36 @@ export default class ArtistsList extends Component {
                 console.log(this.state.artists)
             })
     }
+    getSong = () => {
+        spotifyApi.searchTracks(this.state.searchValue)
+            .then((response) => {
+                console.log(response)
+            })
+    }
 
     render() {
-        const list = <div>
+        const list = <Fragment>
             {this.state.artists.map((item) => {
-                return <Artist key={item.id} name={item.name} followers={item.followers.total} genres={item.genres}/>
+                return <Artist
+                    key={item.id}
+                    name={item.name}
+                    followers={item.followers.total}
+                    genres={item.genres}
+                    image={item.images}
+                />
             })}
-        </div>
+        </Fragment>
         return (
             <div className='container'>
-                <SearchBar handleClick={this.getArtist} value={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+                <SearchBar
+                    handleClick={this.getArtist}
+                    value={this.state.searchValue}
+                    handleChange={this.handleChange}
+                    handleSubmit={this.handleSubmit}
+                    handleSong={this.getSong}
+                />
 
-                <div className="list">
+                <div className="artists__list">
                     {list}
                 </div>
             </div>

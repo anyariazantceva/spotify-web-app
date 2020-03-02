@@ -3,7 +3,7 @@ import './App.css';
 
 import NowPlaying from "./components/now-playing/NowPlaying";
 import AppHeader from "./components/app-header/AppHeader";
-import ArtistsList from "./components/ArtistsList";
+import ArtistsList from "./components/artists-list/ArtistsList";
 import SpotifyWebApi from 'spotify-web-api-js';
 
 const spotifyApi = new SpotifyWebApi();
