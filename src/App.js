@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import NowPlaying from "./components/NowPlaying";
-import AppHeader from "./components/AppHeader";
+import NowPlaying from "./components/now-playing/NowPlaying";
+import AppHeader from "./components/app-header/AppHeader";
 import ArtistsList from "./components/ArtistsList";
 import SpotifyWebApi from 'spotify-web-api-js';
 
@@ -33,14 +33,13 @@ class App extends Component {
         return hashParams;
     }
 
-
-
-
     render() {
         return (
             <div className="App">
                 <AppHeader/>
-                <a href='http://localhost:8888' > Login to Spotify </a>
+                {this.state.loggedIn === false &&
+                    <a href='http://localhost:8888' > Login to Spotify </a>
+                }
                 { this.state.loggedIn &&
                 <NowPlaying/>
                 }

@@ -1,0 +1,42 @@
+.now-playing__wrapper {
+    margin-top: 2rem;
+}
+
+
+.now-playing__btn {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    transition: transform 1s;
+    -webkit-box-shadow: 0 10px 6px -6px #000;
+    -moz-box-shadow: 0 10px 6px -6px #000;
+    box-shadow: 0 10px 6px -6px #000;
+}
+.now-playing__btn:hover, .now-playing__btn:active {
+    background-color: #e5e5e5;
+}
+
+.now-playing__btn:active {
+    transform: translateY(5px);
+}
+
+.now-playing__status {
+    margin: 2rem 0 2rem;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.now-playing__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.now-playing__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.4rem;
+
+}
