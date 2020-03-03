@@ -4,4 +4,21 @@
     font-weight: bold;
     padding: 2rem 0;
 }
+.header__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 46%;
+    margin: 0 auto;
+}
+.header__link {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.header__link:hover {
+    text-decoration: underline;
+}
+
 

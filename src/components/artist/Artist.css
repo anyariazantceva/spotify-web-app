@@ -1,5 +1,6 @@
 .artist-item {
     position: relative;
+    font-size: 1.6rem;
 }
 
 .artist-item::after {
@@ -13,20 +14,23 @@
 }
 .artist__name {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    bottom: 20%;
     z-index: 3;
 }
 .artist__followers {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    bottom: 13%;
     z-index: 2;
 }
 
 .artist__genres {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    bottom: 0;
     z-index: 8;
+    font-size: 1.4rem;
+}
+
+.artist__pic {
+    width: 100%;
+    height: 100%;
 }

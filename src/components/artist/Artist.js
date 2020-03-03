@@ -13,7 +13,7 @@ const Artist = (props) => {
         <div className='artist-item'>
             <div className='artist__name'>Name: {props.name}</div>
             <div className='artist__followers'>Followers: {props.followers}</div>
-            <div className='artist__genres'>Genres: {props.genres[0]}, {props.genres[1]}</div>
+            <div className='artist__genres'>{props.genres[0]}, {props.genres[1]}</div>
             <div className='artist__image'><img className='artist__pic' src={checkImage()} alt=""/></div>
         </div>
     )

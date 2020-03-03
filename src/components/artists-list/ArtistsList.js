@@ -35,20 +35,13 @@ export default class ArtistsList extends Component {
             .then((response) => {
                 this.setState({
                     artists: response.artists.items
-
-                })
+                });
                 console.log(this.state.artists)
-            })
-    }
-    getSong = () => {
-        spotifyApi.searchTracks(this.state.searchValue)
-            .then((response) => {
-                console.log(response)
             })
     }
 
     render() {
-        const list = <Fragment>
+        const Artistslist = <Fragment>
             {this.state.artists.map((item) => {
                 return <Artist
                     key={item.id}
@@ -59,6 +52,7 @@ export default class ArtistsList extends Component {
                 />
             })}
         </Fragment>
+
         return (
             <div className='container'>
                 <SearchBar
@@ -66,11 +60,10 @@ export default class ArtistsList extends Component {
                     value={this.state.searchValue}
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
-                    handleSong={this.getSong}
                 />
 
                 <div className="artists__list">
-                    {list}
+                    {Artistslist}
                 </div>
             </div>
         )

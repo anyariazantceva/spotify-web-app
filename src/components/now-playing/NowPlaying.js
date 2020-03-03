@@ -39,7 +39,7 @@ export default class NowPlaying extends Component {
                                 Song: {this.state.nowPlaying.name}
                             </div>
                             <div className='now-playing__image'>
-                                <img className='now-playing__pic' src={this.state.nowPlaying.albumArt} style={{ height: 150 }}/>
+                                <img className='now-playing__pic' src={this.state.nowPlaying.albumArt}/>
                             </div>
                         </div>
 

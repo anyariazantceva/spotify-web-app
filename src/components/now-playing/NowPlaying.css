@@ -40,3 +40,20 @@
     font-size: 2.4rem;
 
 }
+
+.now-playing__artist {
+    font-size: 2rem;
+}
+
+.now-playing__song {
+    font-size: 2rem;
+}
+
+.now-playing__image {
+    width: 30rem;
+    height: 30rem;
+}
+.now-playing__pic {
+    width: 100%;
+    height: 100%;
+}
