@@ -19,8 +19,8 @@ export default class AppHeader extends Component {
     }
 
     getHashParams() {
-        var hashParams = {};
-        var e, r = /([^&;=]+)=?([^&;]*)/g,
+        const hashParams = {};
+        let e, r = /([^&;=]+)=?([^&;]*)/g,
             q = window.location.hash.substring(1);
         e = r.exec(q)
         while (e) {
@@ -29,16 +29,23 @@ export default class AppHeader extends Component {
         }
         return hashParams;
     }
+    toggleTheme = () => {
+        this.props.toggleTheme();
+    }
 
     render() {
+        const { loggedIn } = this.state;
 
         return (
             <div className='app-header header'>
                 <div className="header__title">Music App with Spotify API</div>
-                {this.state.loggedIn === false &&
-                <a className='header__link' href='http://localhost:8888' > Login to Spotify </a>
+                {loggedIn === false &&
+                    <a className='header__link' href='http://localhost:8888'> Login to Spotify </a>
                 }
-                <NewRouter loggedIn={this.state.loggedIn}/>
+                <div className='header__change-theme'>
+                    <button className='btn search__btn' onClick={this.toggleTheme}>Change theme</button>
+                </div>
+                <NewRouter loggedIn={loggedIn}/>
                 </div>
 
         )

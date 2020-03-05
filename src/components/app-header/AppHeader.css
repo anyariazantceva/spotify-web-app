@@ -6,10 +6,12 @@
 }
 .header__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     list-style: none;
-    width: 46%;
     margin: 0 auto;
+}
+.header__list-item {
+    margin-right: 1rem;
 }
 .header__link {
     color: white;

@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import './NowPlaying.css';
 import SpotifyWebApi from 'spotify-web-api-js';
+import ErrorMessage from "../ErrorMessage";
 const spotifyApi = new SpotifyWebApi();
 
 export default class NowPlaying extends Component {
@@ -8,17 +9,18 @@ export default class NowPlaying extends Component {
         nowPlaying: { name: 'Not Checked', albumArt: '', artistName: '' },
     }
     getNowPlaying(){
-        spotifyApi.getMyCurrentPlaybackState()
-            .then((response) => {
-                console.log(response.item)
-                this.setState({
-                    nowPlaying: {
-                        name: response.item.name,
-                        albumArt: response.item.album.images[0].url,
-                        artistName: response.item.artists[0].name
-                    }
-                });
-            })
+            spotifyApi.getMyCurrentPlaybackState()
+                .then((response) => {
+                    console.log(response.item)
+                    this.setState({
+                        nowPlaying: {
+                            name: response.item.name,
+                            albumArt: response.item.album.images[0].url,
+                            artistName: response.item.artists[0].name
+                        }
+                    });
+                })
+
     }
     render() {
         return (

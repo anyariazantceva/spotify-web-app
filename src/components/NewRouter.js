@@ -8,6 +8,7 @@ import {
 import App from "../App";
 import NowPlaying from "./now-playing/NowPlaying";
 import ArtistsList from "./artists-list/ArtistsList";
+import ErrorMessage from "./ErrorMessage";
 
 export default class NewRouter extends Component {
     render() {
@@ -19,17 +20,14 @@ export default class NewRouter extends Component {
                     <li className="header__list-item"><Link className='header__link' to='/search-artist'>Search by artist</Link></li>
                 </ul>
                 <Switch>
-                    <Route path="/home">
-                        <App />
-                    </Route>
+                    <Route exact path="/home" component={App} />
                     <Route path="/now-playing">
                         { this.props.loggedIn &&
-                        <NowPlaying/>
+                        <NowPlaying loggedIn={this.props.loggedIn}/>
                         }
                     </Route>
-                    <Route path="/search-artist">
-                        <ArtistsList />
-                    </Route>
+                    <Route path="/search-artist" component={ArtistsList}/>
+
                 </Switch>
             </Router>
         )

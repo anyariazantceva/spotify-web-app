@@ -19,4 +19,8 @@ export const GlobalStyles = createGlobalStyle`
   .header__link {
     color: ${({ theme }) => theme.text};
   }
+  .search__btn {
+    background: ${({ theme }) => theme.btnColor};
+    color: ${({ theme }) => theme.btnText};
+  }
 `

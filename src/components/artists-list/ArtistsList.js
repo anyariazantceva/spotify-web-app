@@ -11,8 +11,7 @@ export default class ArtistsList extends Component {
         super(props)
         this.state = {
             searchValue: '',
-            artists: [],
-            songs: []
+            artists: []
 
         }
     }
@@ -27,27 +26,34 @@ export default class ArtistsList extends Component {
         this.setState({
             searchValue: e.target.value
         })
+        this.clearField();
 
     };
+    clearField = () => {
+        this.setState({
+            searchValue: ''
+        })
+    }
 
     getArtist = () => {
         spotifyApi.searchArtists(this.state.searchValue)
             .then((response) => {
+                console.log(response.artists.items)
                 this.setState({
                     artists: response.artists.items
                 });
-                console.log(this.state.artists)
             })
     }
 
     render() {
-        const Artistslist = <Fragment>
+        const ArtistsList = <Fragment>
             {this.state.artists.map((item) => {
                 return <Artist
                     key={item.id}
+                    id={item.id}
                     name={item.name}
+                    url={item.external_urls.spotify}
                     followers={item.followers.total}
-                    genres={item.genres}
                     image={item.images}
                 />
             })}
@@ -63,7 +69,7 @@ export default class ArtistsList extends Component {
                 />
 
                 <div className="artists__list">
-                    {Artistslist}
+                    {ArtistsList}
                 </div>
             </div>
         )

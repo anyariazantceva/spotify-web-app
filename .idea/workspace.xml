@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3738baaa-c749-46b7-b9b5-27e6da27cfa1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ArtistDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ErrorMessage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/photo-1511671782779-c97d3d27a1d4.jfif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ArtistDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app-header/AppHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app-header/AppHeader.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app-header/AppHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app-header/AppHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/artist/Artist.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/artist/Artist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/artist/Artist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/artist/Artist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/artists-list/ArtistsList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/artists-list/ArtistsList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/artists-list/ArtistsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/artists-list/ArtistsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/now-playing/NowPlaying.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/now-playing/NowPlaying.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +49,15 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Дмитрий\Desktop\Integrify\music-app\src\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Дмитрий\Desktop\Integrify\music-app\src\img" />
       <recent name="C:\Users\Дмитрий\Desktop\Integrify\music-app\server\auth-server" />
       <recent name="C:\Users\Дмитрий\Desktop\Integrify\music-app\src\components\artists-list" />
       <recent name="C:\Users\Дмитрий\Desktop\Integrify\music-app\src\components\artist" />
       <recent name="C:\Users\Дмитрий\Desktop\Integrify\music-app\src\components\now-playing" />
-      <recent name="C:\Users\Дмитрий\Desktop\Integrify\music-app\src\components\app-header" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Дмитрий\Desktop\Integrify\music-app\src\img" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -100,7 +106,8 @@
       <workItem from="1583220685387" duration="9538000" />
       <workItem from="1583315698775" duration="154000" />
       <workItem from="1583329163251" duration="1137000" />
-      <workItem from="1583393744335" duration="5153000" />
+      <workItem from="1583393744335" duration="8122000" />
+      <workItem from="1583413384275" duration="8407000" />
     </task>
     <task id="LOCAL-00001" summary="Started a music player project">
       <created>1582061420362</created>
@@ -144,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583227236808</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added toggling themes functionality">
+      <created>1583401698170</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1583401698170</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,17 +188,18 @@
     <MESSAGE value="Wrote styles for now playing component" />
     <MESSAGE value="Implemented search songs" />
     <MESSAGE value="Implemented router and deleted search by songs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented router and deleted search by songs" />
+    <MESSAGE value="Added toggling themes functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added toggling themes functionality" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="350" y="50" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583399583263">
+    <state x="350" y="50" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583402689665">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="50" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1583399583263" />
-    <state x="197" y="0" key="CommitChangelistDialog2" timestamp="1583227232979">
+    <state x="350" y="50" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1583402689665" />
+    <state x="197" y="0" key="CommitChangelistDialog2" timestamp="1583401694434">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="197" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583227232979" />
+    <state x="197" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583401694434" />
     <state x="413" y="61" key="FileChooserDialogImpl" timestamp="1583180134790">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
