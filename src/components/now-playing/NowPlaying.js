@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import './NowPlaying.css';
 import SpotifyWebApi from 'spotify-web-api-js';
 const spotifyApi = new SpotifyWebApi();
@@ -41,7 +41,7 @@ export default class NowPlaying extends Component {
                                 Song: {nowPlaying.name}
                             </div>
                             <div className='now-playing__image'>
-                                <img className='now-playing__pic' src={nowPlaying.albumArt}/>
+                                <img className='now-playing__pic' src={nowPlaying.albumArt} alt={nowPlaying.name}/>
                             </div>
                         </div>
 

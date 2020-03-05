@@ -23,4 +23,21 @@
     text-decoration: underline;
 }
 
+@media screen and (max-width: 620px) {
+    .app-header {
+        font-size: 2.4rem;
+    }
+
+    .header__list {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .header__list {
+        font-size: 1.2rem;
+        text-transform: none;
+        display: block;
+    }
+}
 

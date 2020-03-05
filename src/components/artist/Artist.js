@@ -12,7 +12,7 @@ const Artist = ({url, name, followers, image}) => {
     };
 
     return (
-        <a target='_blank' className='artist__link' href={url}>
+        <a target='_blank'  rel="noopener noreferrer" className='artist__link' href={url}>
         <div className='artist-item'>
             <div className='artist__name'>{name}</div>
             <div className='artist__followers'>Followers: {followers}</div>
