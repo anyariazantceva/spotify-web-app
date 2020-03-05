@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import SpotifyWebApi from 'spotify-web-api-js';
 import './AppHeader.css';
-import NowPlaying from "../now-playing/NowPlaying";
-import ArtistsList from "../artists-list/ArtistsList";
-import App from "../../App";
-import NewRouter from "../Router";
+import NewRouter from "../NewRouter";
 
 const spotifyApi = new SpotifyWebApi();
 
@@ -17,7 +14,7 @@ export default class AppHeader extends Component {
             spotifyApi.setAccessToken(token);
         }
         this.state = {
-            loggedIn: token ? true : false,
+            loggedIn: token ? true : false
         }
     }
 
@@ -32,16 +29,19 @@ export default class AppHeader extends Component {
         }
         return hashParams;
     }
+
     render() {
+
         return (
             <div className='app-header header'>
                 <div className="header__title">Music App with Spotify API</div>
                 {this.state.loggedIn === false &&
                 <a className='header__link' href='http://localhost:8888' > Login to Spotify </a>
                 }
-
                 <NewRouter loggedIn={this.state.loggedIn}/>
-            </div>
+                </div>
+
         )
     }
 }
+

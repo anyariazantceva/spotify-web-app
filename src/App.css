@@ -15,8 +15,6 @@ body {
 
 .App {
   text-align: center;
-  background: linear-gradient(#282c34, #000000), no-repeat;
-  color: #ffffff;
   font-family: 'Poppins', sans-serif;
   height: 100%;
 }
@@ -49,7 +47,6 @@ body {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
