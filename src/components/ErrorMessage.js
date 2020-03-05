@@ -2,8 +2,8 @@ import React from "react";
 
 const ErrorMessage = () => {
     return (
-        <div>
-            Please login first!
+        <div className='error__message'>
+            Please listen a song in spotify player first!
         </div>
     )
 }

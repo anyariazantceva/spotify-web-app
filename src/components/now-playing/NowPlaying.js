@@ -1,17 +1,16 @@
 import React, {Component, Fragment} from 'react';
 import './NowPlaying.css';
 import SpotifyWebApi from 'spotify-web-api-js';
-import ErrorMessage from "../ErrorMessage";
 const spotifyApi = new SpotifyWebApi();
 
 export default class NowPlaying extends Component {
     state = {
-        nowPlaying: { name: 'Not Checked', albumArt: '', artistName: '' },
-    }
+        nowPlaying: { name: 'Nothing is playing', albumArt: '', artistName: '' },
+    };
+
     getNowPlaying(){
             spotifyApi.getMyCurrentPlaybackState()
                 .then((response) => {
-                    console.log(response.item)
                     this.setState({
                         nowPlaying: {
                             name: response.item.name,
@@ -23,25 +22,26 @@ export default class NowPlaying extends Component {
 
     }
     render() {
+        const { nowPlaying } = this.state;
         return (
             <div className='now-playing'>
                 <button className='now-playing__btn btn' onClick={() => this.getNowPlaying()}>
                     Check Now Playing
                 </button>
-                {this.state.nowPlaying.name !== 'Not Checked' &&
+                {nowPlaying.name !== 'Nothing is playing' &&
                     <div className='now-playing__wrapper'>
                         <div className='now-playing__title'>
                             Now Playing:
                         </div>
                         <div className="now-playing__content">
                             <div className="now-playing__artist">
-                                Artist: {this.state.nowPlaying.artistName}
+                                Artist: {nowPlaying.artistName}
                             </div>
                             <div className="now-playing__song">
-                                Song: {this.state.nowPlaying.name}
+                                Song: {nowPlaying.name}
                             </div>
                             <div className='now-playing__image'>
-                                <img className='now-playing__pic' src={this.state.nowPlaying.albumArt}/>
+                                <img className='now-playing__pic' src={nowPlaying.albumArt}/>
                             </div>
                         </div>
 

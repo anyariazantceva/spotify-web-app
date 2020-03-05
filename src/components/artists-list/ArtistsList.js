@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import './ArtistsList.css';
-import SearchBar from "../SearchBar";
+import SearchBar from "../search-bar/SearchBar";
 import SpotifyWebApi from 'spotify-web-api-js';
 import Artist from "../artist/Artist";
 
@@ -12,7 +12,6 @@ export default class ArtistsList extends Component {
         this.state = {
             searchValue: '',
             artists: []
-
         }
     }
 

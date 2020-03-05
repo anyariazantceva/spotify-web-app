@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import SpotifyWebApi from 'spotify-web-api-js';
-import './AppHeader.css';
+import './AppContent.css';
 import NewRouter from "../NewRouter";
 
 const spotifyApi = new SpotifyWebApi();
 
-export default class AppHeader extends Component {
+export default class AppContent extends Component {
     constructor(props) {
         super(props)
         const params = this.getHashParams();
@@ -38,7 +38,7 @@ export default class AppHeader extends Component {
 
         return (
             <div className='app-header header'>
-                <div className="header__title">Music App with Spotify API</div>
+                <div className="header__title">Spotify API Application</div>
                 {loggedIn === false &&
                     <a className='header__link' href='http://localhost:8888'> Login to Spotify </a>
                 }

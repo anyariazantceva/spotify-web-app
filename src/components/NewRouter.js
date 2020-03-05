@@ -8,7 +8,6 @@ import {
 import App from "../App";
 import NowPlaying from "./now-playing/NowPlaying";
 import ArtistsList from "./artists-list/ArtistsList";
-import ErrorMessage from "./ErrorMessage";
 
 export default class NewRouter extends Component {
     render() {
